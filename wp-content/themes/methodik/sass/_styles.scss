@@ -1,0 +1,102 @@
+#caseStudy { height: 0; overflow: hidden; }
+#loading { display: block; margin: 0 auto; @include opacity(0); }
+#cs1-container { overflow: hidden; }
+
+div.mobCheck { position: relative;
+	@media #{$golf} { position: absolute; }
+}
+div.iPadCheck { position: relative;
+	@media #{$iPad} { position: absolute; }
+}
+
+.bgBlue.button { @include transition(all .3s ease);
+	&:hover { background: darken($blue, 10%); }
+}
+.bgRed.button { @include transition(all .3s ease);
+	&:hover { background: darken($red, 10%); }
+}
+
+.modalNav { @include translate(-50%, -20%); @include box-shadow(0rem 0rem 30rem 30rem rgba(0, 0, 0, 0.3)); width: 50%; height: auto; background: rgba(0, 0, 0, 0.9); top: 30%; left: 50%; position: fixed; z-index: $layer5; padding: $dist;
+	@media #{$golf} { display: none; }
+	p { text-align: center; margin-top: $dist; }
+	img { width: 2rem; margin: 0 auto; display: block; -webkit-animation: modalArrow 1s infinite; -webkit-animation-direction: alternate; }
+	span { display: block; color: $black; max-width: 4rem; height: 2rem; line-height: 2rem; margin: $dist auto; text-align: center; }
+}
+
+
+@-webkit-keyframes modalArrow {
+	from { @include translateY(.5rem); }
+	to { @include translateY(-.5rem); }
+}
+
+/* == SUB PAGE STYLING == */
+
+.index .back { display: none; }
+.subPage .button.back { @include opacity(.85); @include transition(all .3s ease); padding: .5rem; width: 4.75rem; position: absolute; top: $dist; left: $dist; line-height: 1.6rem; background: url('../img/sprite.png'), $red; background-position: -1672px -86px; text-align: right;
+	@media #{$polo} { top: .25rem !important; left: .25rem !important; }
+	&:hover { @include opacity(1); }
+	// @media #{$golf} { top: $dist*2; }
+}
+
+
+.subPage .container.how-we-do-it { overflow: hidden;
+	@media #{$golf} { margin-top: $dist/2 !important; }
+}
+.subPage .inner { position: relative; }
+
+
+.entry { width: 100%;
+	@media #{$golf} { max-width: 60rem; margin: 0 auto; }
+	h2 { text-transform: lowercase; font-size: 1.5rem; }
+	p { color: lighten(#272727, 7.5%);
+		@media #{$golf} { font-size: 1rem; line-height: $baseline*1.25; margin: $baseline auto; }
+	}
+	blockquote { @include droidSans; font-size: .75rem; line-height: $baseline*1.25; font-style: italic; margin-bottom: $baseline; margin-left: $dist;
+		&:before { content: '\201C'; font-size: 1.5rem; @include lobster; }
+		&:after { content: '\201D'; font-size: 1.5rem; @include lobster; line-height: $baseline; vertical-align: middle; }
+		&.whiteBlock { margin-left: 0; background: white; padding: $dist; font-style: normal;
+			@media #{$golf} { width: 130%; margin-left: -15%; border-left: 1rem $red solid; }
+			&:before, &:after { display: none; }
+		}
+		@media #{$golf} { @include droidSans; font-size: 1rem; line-height: $baseline*1.5; margin-bottom: $baseline; margin-left: 0; padding-left: $dist; border-left: $dist $blue solid; }
+	}
+	ul { margin-left: $dist; margin-bottom: $baseline;
+		li { @include droidSans; font-size: .75rem; line-height: $baseline;
+			@media #{$golf} { font-size: 1rem; color: lighten(#272727, 7.5%); }
+			&:before { content: ''; background: $red; width: .25rem; height: .25rem; margin-bottom: .15rem; margin-right: .5rem; vertical-align: middle; position: relative; display: inline-block; }
+		}
+	}
+	em { font-style: italic; }
+	a { font-family: inherit; font-size: inherit; border-bottom: 1px $red solid; }
+}
+
+/* == THE PROCESS == */
+.articleImg-halfwidth { width: 100%; margin-bottom: $dist*3;
+	@media #{$golf} { width: 50%; display: inline-block; float: left; }
+}
+.articleImg-fullwidth { width: 100%;
+	@media #{$golf} {  }
+}
+.centerCol { width: 100%; margin: $baseline auto;
+	@media #{$golf} { width: 60%; }
+}
+.graphic-and-quote { overflow: hidden; zoom: 1; position: relative; margin-top: $dist*3; margin-bottom: $dist*3;
+
+	img { margin-bottom: 0; }
+	
+	blockquote { width: 100%; margin-left: 0; color: $blue; font-size: $baseline; line-height: $baseline*2; padding: $baseline $baseline 0 $baseline; border: none;
+		@media #{$golf} { display: inline-block; width: 50%; float: right; padding-bottom: 0; margin-bottom: 0; }
+	}
+	p { padding: 0 $baseline 0 $baseline; color: white; display: block; width: 100%; margin-bottom: 0; color: $black;
+		@media #{$golf} { display: inline-block; width: 50%; }
+	}
+}
+.graphic-spread { width: 100%;
+	@media #{$golf} { padding: $dist*3 0 $dist*3 0; }
+	em { color: #6f584f; font-size: $baseline/2; }
+}
+.about-jpsg.tileGrid-container span {
+	@media #{$golf} { width: 30% !important; padding-top: 30% !important; }
+}
+
+

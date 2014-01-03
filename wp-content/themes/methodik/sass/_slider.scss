@@ -1,0 +1,30 @@
+/* == 960PX SLIDER == */
+
+#slides { display: none; }
+.slidesjs-navigation { margin-top:3px; }
+.slidesjs-previous { position: absolute; top: 50%; margin-top: -3rem; left: 0; height: 6rem; width: 2rem; background: url('../img/sprite.png') -1669px -60px no-repeat, $red; z-index: $layer1;}
+.slidesjs-next { @extend .slidesjs-previous; left: auto; right: 0; background: url('../img/sprite.png') -1667px -160px no-repeat, $red; }
+.slidesjs-previous, .slidesjs-next { @include opacity(.8); @include transition(all .3s ease);
+  &:hover { @include opacity(1); }
+}
+
+.slidesjs-pagination { margin: 6px 0 0; float: right; list-style: none; }
+.slidesjs-pagination li { float: left; margin: 0 1px; }
+.slidesjs-pagination li a { display: block; width: 13px; height: 0; padding-top: 13px; background-image: url(img/pagination.png); background-position: 0 0; float: left; overflow: hidden; }
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active { background-position: 0 -13px; }
+.slidesjs-pagination li a:hover { background-position: 0 -26px; }
+
+#slides a:link,
+#slides a:visited { color: #333; }
+#slides a:hover,
+#slides a:active { color: #9e2020; }
+
+.navbar { overflow: hidden; }
+
+// <!-- End SlidesJS Optional-->
+
+// <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+
+#slides { display: none; }
+.container { margin: 1.4rem auto !important; }

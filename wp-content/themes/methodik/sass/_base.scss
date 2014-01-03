@@ -1,0 +1,46 @@
+
+
+* { @include box-sizing(border-box); }
+body { @include droidSans; color: $black; font-size: 100%;
+	@media #{$iPad} {  }
+}
+
+/* == ATTEMPTED BASELINE == */
+
+h1 { @include openSansBold; font-size: 2rem; }
+.entry h1 { line-height: $baseline*2; line-height: $baseline*2; margin-bottom: $baseline; }
+h2 { @include openSansBold; font-size: $baseline; line-height: $baseline; margin-bottom: $baseline/2; }
+h3 { @include openSansBold; font-size: 1rem; }
+h4 { @include openSansLight; font-size: .875rem; }
+h4.indexTitle { @include fontSmoothing; text-align: center; padding: $dist; width: 12rem; margin: 0 auto; color: lighten($black, 25%); line-height: 1rem; }
+
+p { @include droidSans; font-size: .75rem; line-height: $baseline; margin-bottom: $baseline; }
+p.huge { @include openSansBold; font-size: 2rem; margin-bottom: $baseline; line-height: $baseline*2;
+	@media #{$polo} { font-size: 1.5rem; line-height: $baseline+$baseline/2; }
+}
+p.big { font-size: 1.5rem; margin-bottom: $dist; line-height: $baseline*1.5; color: $black; -webkit-font-smoothing: antialiased;
+	@media #{$polo} { font-size: 1rem; line-height: $baseline; }
+}
+strong { @include droidSansBold; font-size: inherit; }
+a { text-decoration: none; color: inherit; }
+i { @include iconFont; font-size: 2rem; text-align: center; display: block;  }
+
+::selection { background: $red; color: white; }
+::moz-selection { background: $red; color: white; }
+
+.black { color: $black; }
+.yellow { color: $yellow; }
+.blue { color: $black; }
+.lightBlue { color: $lightBlue; }
+.red { color: $red; }
+.white { color: white; @include fontSmoothing; }
+
+.bgBlack { background: $black; }
+.bgYellow { background: $yellow; }
+.bgBlue { background: $blue; }
+.bgLightBlue { background: $lightBlue; }
+.bgRed { background: $red; }
+.bgWhite { background: white; }
+
+
+

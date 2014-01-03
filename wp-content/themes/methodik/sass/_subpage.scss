@@ -1,0 +1,56 @@
+/* == ABOUT US PAGE TEMPLATE == */
+
+.about-us { overflow: hidden; zoom: 1; margin-top: $baseline/2 !important;
+	@media #{$golf} { padding-bottom: $dist; }
+	h1 { display: inline-block; font-size: $baseline*2;
+		@media #{$golf} { width: 100%; font-size: $baseline*3; margin-bottom: $baseline*1.5; margin-top: 0; }
+		span { @include droidSans; font-size: $baseline/2; vertical-align: middle; padding-left: 1.5rem; }
+	}
+}
+img.about-us-mainImg { width: 100%; height: auto; margin-top: $dist;
+	@media #{$golf} { width: 66%; float: right; }
+}
+section.bio { padding: $dist; margin-top: $dist;
+	@media #{$golf} { width: 66%; float: right; padding: $dist*2;}
+	p {
+		@media #{$golf} { font-size: .875rem; line-height: $baseline*1.25; color: #3a3a3a; }
+	}
+}
+.stats { margin-top: $dist; 
+	@media #{$golf} { width: 31%; }
+
+	span { width: 30%; padding-top: 29%; margin-bottom: $dist;
+		@media #{$golf} { width: 45%; padding-top: 45%; margin-bottom: $dist; }
+	}
+	p.percentage { position: absolute; top: $dist/3; position: absolute; text-align: center; display: block; width: 100%; color: white; width: 30%; left: 50%; margin-left: -15%; z-index: $layer3; }
+	i.fitText2 { top: 30%; z-index: $layer2; }
+	.stats-bar { height: 0%; width: 100%; position: absolute; bottom: 0; left: 0; background: $black; z-index: $layer1; }
+}
+
+aside.about-us-photography-container {
+	@media #{$golf} { margin: $dist 0 $dist 0; width: 31%; }
+	.photography { height: auto; overflow: hidden; margin-top: $dist; position: relative;
+		img { width: 100%; }
+		h2 { position: absolute; background: $red; top: $dist/2; left: $dist/2; vertical-align: middle; padding: .5rem; }
+		i { background: $yellow; display: inline-block; padding: .4rem; font-size: .875rem; position: absolute; top: 3.7rem; left: .7rem; }
+	}
+}
+
+aside.about-us-design-container { display: block; width: 100%; float: right; margin-top: $dist;
+	@media #{$touareg} { text-align: justify; font-size: 0.1px;
+		&:after { content: ''; display: inline-block; width: 100%; }
+	}
+	@media #{$golf} { text-align: justify; font-size: 0.1px;
+		&:after { content: ''; display: inline-block; width: 100%; }
+	}
+	.design { width: 100%; position: relative; margin-bottom: $dist;
+		@media #{$touareg} { width: 30%; display: inline-block; }
+		@media #{$golf} { width: 32%; display: inline-block; }
+		img { margin: 0 auto; display: block; width: 100%; z-index: $layer1; }
+		h2 { position: absolute; background: $red; top: $dist/2; left: $dist/2; vertical-align: middle; padding: .5rem; z-index: $layer2;
+			@media #{$touareg} { font-size: .875rem; }
+		}
+	}
+	
+	i { background: $red; display: inline-block; padding: .4rem; font-size: .875rem; position: absolute; top: 3.7rem; left: .7rem; z-index: $layer2; }
+}

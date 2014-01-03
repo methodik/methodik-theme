@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="105.668px" height="134.335px" viewBox="0 0 105.668 134.335" enable-background="new 0 0 105.668 134.335"
+	 xml:space="preserve">
+<rect x="51.5" y="23.668" fill="#494849" width="14.458" height="13.25"/>
+<rect x="92.207" y="23.668" fill="#D6D6D6" width="6" height="5.984"/>
+<rect x="92.207" y="17.684" fill="#EEF0F0" width="6" height="5.984"/>
+<path fill="#272727" d="M52.834,35.483c0-7.285,0-11.815,0-11.815H0v63.833c0,0,11.167,30.168,52.834,46.834
+	c41.666-16.666,52.834-46.834,52.834-46.834v-52L52.834,35.483z"/>
+<rect x="52.833" fill="#B5B5B6" width="13.125" height="11.834"/>
+<rect x="65.958" y="11.834" fill="#646665" width="15.125" height="11.834"/>
+<rect x="79.083" y="11.834" fill="#848585" width="13.125" height="11.834"/>
+<rect y="14.501" fill="#DD4A38" width="6" height="5.984"/>
+<rect x="8.979" y="14.501" fill="#F8CE49" width="6" height="5.984"/>
+<rect x="17.979" y="14.501" fill="#6292AA" width="6" height="5.984"/>
+<text transform="matrix(1 0 0 1 34 85.3335)" fill="#FFFFFF" font-family="'Lobster'" font-size="56">m</text>
+</svg>

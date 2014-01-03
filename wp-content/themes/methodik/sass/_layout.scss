@@ -1,0 +1,182 @@
+/* == HELPERS == */
+.sprite { background: url('../img/sprite.png'); }
+
+/* == HEADER == */
+.siteHeader { padding: $dist; }
+a.logoContainer { display: block; overflow: hidden; zoom: 1; width: 7.75rem; margin: 0 auto; height: 3rem;
+	@media #{$golf} { height: 6rem; }
+	@media #{$campervan} { height: 8rem; }
+}
+.logoIcon { width: 2rem; float: left; display: inline-block;
+	@media #{$golf} { width: 3rem; float: none; margin: 0 auto; display: block; }
+	@media #{$campervan} { width: 3.25rem; margin: 1.5rem auto 0; }
+}
+.logo { font-size: 1rem; float: right; display: inline-block; line-height: 2.75rem;
+	@media #{$golf} { float: none; text-align: center; width: 100%; }
+}
+h1.tagline { text-align: center; width: 17rem; margin: $dist auto 0;
+	@media #{$golf} { width: 42rem; font-size: 3.25rem; }
+	@media #{$campervan} { width: 53rem; font-size: 4.25rem; line-height: 5.25rem; margin-bottom: 1rem; }
+}
+
+
+/* == NAV == */
+.mainNavigation { z-index: $layer5; position: fixed; bottom: 0; left: 0; display: block; background: $black; width: 100%; height: 3rem;
+	@media #{$golf} { position: relative; background: transparent; height: 2rem; }
+	@media #{$iPad} { position: fixed; background: $black; height: 3rem; }
+}
+
+.mainNavigation span { @include openSansLight; line-height: 3rem; color: white; display: block; width: 5.5rem; background: url('../img/navicon.svg') 4rem 1rem no-repeat; height: 3rem; margin: 0 auto;
+	@media #{$golf} { display: none; }
+	@media #{$iPad} { display: block; }
+}
+
+.navContainer { height: 12rem; background: white; position: fixed; bottom: -14rem; left: 0; width: 100%;
+	@media #{$golf} { position: relative; bottom: 0; height: auto; text-align: justify; font-size: 0.1px; max-width: 60rem; margin: 0 auto; }
+	@media #{$iPad} { position: fixed; bottom: -14rem; height: 12rem; text-align: center; left: 0; width: 100%; background: white; }
+
+	li { @include openSansLight; text-transform: uppercase; color: $black; font-size: .875rem; height: 3rem; line-height: 3rem; border-top: 1px darken($lightGrey, 10%) solid; text-align: center; background: white;
+		@media #{$golf} { @include opacity(.65); @include transition(all .3s ease); display: inline-block; border: none; width: 15%; height: 2rem; line-height: 2rem; 
+			&:hover { @include opacity(1);  }
+		}
+		@media #{$iPad} { @include opacity(1); font-size: .875rem; height: 3rem; line-height: 3rem; border-top: 1px darken($lightGrey, 10%) solid; display: block; width: 100%; }
+
+		&.placeholder { height: 0; display: none;
+			@media #{$golf} { display: inline-block; }
+			@media #{$iPad} { height: 0; display: none; }
+		}
+	}
+}
+
+/* == MAIN CONTENT == */
+.container { background: $lightGrey;
+	@media #{$campervan} { margin: 0 $dist $dist $dist !important; }
+}
+.container.how-we-do-it { overflow: hidden; zoom: 1; margin-top: $dist/2 !important; }
+
+.inner { width: 100%; padding: $dist; max-width: 60rem; margin: 0 auto; }
+
+
+.quote { overflow: hidden; zoom: 1; }
+.bigQuote { @include lobster; font-size: 2rem; overflow: hidden; display: block; zoom: 1; text-align: center; width: 100%; display: block; margin: 0 auto; padding-top: 0; margin-bottom: $baseline*2;
+
+	h5 { margin-bottom: $baseline/2;
+		@media #{$polo} { margin-bottom: 0; }
+	}
+	sub { @include droidSans; font-size: .875rem; display: block; float: right; margin-right: 7.5%; color: darken($lightGrey, 15%); }
+}
+.quote .projectDescription-container {
+	@media #{$golf} { overflow: hidden; zoom: 1; }
+}	
+.quote .projectDescription {
+	@media #{$golf} { width: 50%; display: inline-block; width: 50%; float: left; padding-right: $dist/2; }
+}
+.quote .smallQuote {
+	@media #{$golf} { width: 50%; display: inline-block; width: 50%; float: right; padding-left: $dist/2; padding-top: $baseline*2; }
+}
+
+.gallerySlider { height: auto; }
+
+.quoteButtonContainer { text-align: justify; font-size: 0.1px;
+	&:after { content: ''; display: inline-block; width: 100%; }
+	button { width: 32%; display: inline-block; height: 3rem;
+		@media #{$polo} { font-size: .6rem; }
+	}
+}
+
+.staffMember-container { text-align: justify; font-size: 0.1px;
+	&:after { content: ''; display: inline-block; height: 0; width: 100%; }
+}
+.staffMember { display: inline-block; clear: right; overflow: hidden; zoom: 1; margin-top: .65rem; position: relative;
+	@media #{$golf} { display: inline-block; width: 30%; }
+	
+	.jamie { background: $yellow; }
+	.mat { background: $red; }
+	.antonis { background: $blue; }
+
+	img { background: $red; width: 50%; display: inline-block; float: left;
+		@media #{$golf} { width: 100%; }
+		@media #{$campervan} { width: 100%; }
+	}
+	a { right: auto; left: 0;
+		@media #{$golf} { left: auto; right: 0; }
+	}
+	footer { width: 50%; display: inline-block; float: right; padding: 0 .65rem 0 .65rem;
+		@media #{$golf} { width: auto; float: left; padding: 0; margin-top: $dist/2; }
+		p { margin-bottom: $dist/2; }
+	}
+	
+}
+
+.about-us p.huge, .about-us p.big {
+	@media #{$golf} { width: 80%; }
+}
+
+.theProcess { background: url('../img/the-process-background.jpg') 50% 0; height: 25rem; margin-bottom: $dist; position: relative;
+	div { position: relative; display: block; margin: 0 auto; padding-top: $dist*2; width: 21rem;
+		.title { @include openSansBold; padding: 0 .5rem 0; font-size: $baseline*1.5;  }
+		.tagline { padding: 0 .5rem; text-transform: lowercase; color: $black; }
+		a { @include transition(all .3s ease); height: 2rem !important; line-height: 2rem; padding-left: $dist; width: 8.5rem; display: block; margin-top: $dist/2; background: url('../img/sprite.png') -1730px -187px, $red; color: white; margin: 1rem auto;
+			&:hover { background: url('../img/sprite.png') -1735px -187px, darken($red, 10%); }
+		}
+	}
+}
+
+
+
+/* == SECONDARY NAV == */
+.secondaryNav { font-size: 0.1px; padding: 0 $dist $dist; text-align: justify; max-width: 60rem; margin: 0 auto;
+	button { width: 45%; margin-top: 2.5%;
+		@media #{$campervan} { width: 20%; }
+		&.last { width: 100%; @include opacity(0); height: 0; }
+	}
+}
+
+
+/* == FOOTER == */
+.footerSection { overflow: hidden; zoom: 1; display: block;
+	h2 { width: 60%; text-align: left;
+		@media #{$golf} { font-size: $baseline*2; line-height: $baseline*2; width: 70%; }
+	}
+	h2.red { display: block; margin-bottom: $baseline*2; }
+}
+
+.boringFooter { width: 100%; background: lighten($black, 10%); height: auto; padding-bottom: 2.5rem; padding-top: 1rem; color: white; text-align: center; line-height: 1.5rem;
+	@media #{$golf} { padding-top: 1rem; padding-bottom: .25rem;  }
+}
+
+/* == MAP == */
+.map-container { position: relative;
+	span.button { position: absolute; top: $dist; left: $dist; line-height: $baseline; width: 6rem; text-align: center; height: 2rem; line-height: 2rem; z-index: $layer2; }
+}
+.map { height: 36.125em; width: 100%; background: url('../img/sprite.png') -1990px -600px no-repeat; position: relative; padding: $dist; overflow: hidden;
+	@media #{$golf} { width: 48%; display: inline-block; float: left; margin-bottom: $dist; }
+}
+
+.map-maskLayer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); z-index: $layer2;
+	@media #{$golf} { width: 48%; height: 36.125rem; }
+}
+
+.map img { position: absolute; top: $dist; left: $dist; z-index: 100; }
+p.mapAddress { color: white; width: 70%; z-index: 150; position: absolute; bottom: 0em; left: 1rem; padding-bottom: 1rem; font-size: 1.75rem; line-height: 1.5em;
+	@media #{$polo} { bottom: 1rem; }
+	span { display: block; font-size: 1rem; }
+}
+
+/* == FORM == */
+
+.contactForm { margin-top: $dist; 
+	@media #{$golf} { width: 48%; display: inline-block; float: right; margin-top: 0; }
+	
+	label { display: block; margin-bottom: .275rem; font-size: .75rem; line-height: $baseline; }
+	input, textarea { line-height: 2rem; padding-left: .5rem; @include droidSans; }
+	input { display: block; width: 100%; margin-bottom: $dist; height: 2rem; }
+	textarea { width: 100%; resize: vertical; line-height: $baseline; margin-top: .45rem;
+		@media #{$golf} { height: 12rem; }
+	}
+	input[type = submit] { margin-top: $dist; height: 4rem; -webkit-appearance: none; }
+
+	// contact form 7 work around
+
+	p { line-height: 0; margin-bottom: 0; }
+}

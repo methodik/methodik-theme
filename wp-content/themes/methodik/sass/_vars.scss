@@ -1,0 +1,104 @@
+/* == FONTS == */
+
+@font-face {
+    font-family: 'openSansExtraBold';
+    src: url('../fonts/opensans-extrabold-webfont.eot');
+    src: url('../fonts/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-extrabold-webfont.woff') format('woff'),
+         url('../fonts/opensans-extrabold-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-extrabold-webfont.svg#open_sansextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'openSansLight';
+    src: url('../fonts/opensans-light-webfont.eot');
+    src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-light-webfont.woff') format('woff'),
+         url('../fonts/opensans-light-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lobster';
+    src: url('../fonts/lobster-webfont.eot');
+    src: url('../fonts/lobster-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lobster-webfont.woff') format('woff'),
+         url('../fonts/lobster-webfont.ttf') format('truetype'),
+         url('../fonts/lobster-webfont.svg#lobster_1.4regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'droidSansRegular';
+    src: url('../fonts/droidsans-webfont.eot');
+    src: url('../fonts/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droidsans-webfont.woff') format('woff'),
+         url('../fonts/droidsans-webfont.ttf') format('truetype'),
+         url('../fonts/droidsans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'droidSansBold';
+    src: url('../fonts/droidsans-bold-webfont.eot');
+    src: url('../fonts/droidsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droidsans-bold-webfont.woff') format('woff'),
+         url('../fonts/droidsans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/droidsans-bold-webfont.svg#droid_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'heydingsIcons';
+    src: url('../fonts/heydings_icons-webfont.eot');
+    src: url('../fonts/heydings_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/heydings_icons-webfont.woff') format('woff'),
+         url('../fonts/heydings_icons-webfont.ttf') format('truetype'),
+         url('../fonts/heydings_icons-webfont.svg#heydings_iconsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@mixin iconFont { font-family: heydingsIcons; }
+@mixin lobster { font-family: lobster, arial, sans-serif; }
+@mixin droidSans { font-family: droidSansRegular, arial, sans-serif; }
+@mixin droidSansBold { font-family: droidSansBold, arial, sans-serif; }
+@mixin openSansLight { font-family: openSansLight, arial, sans-serif; }
+@mixin openSansBold { font-family: openSansExtraBold, arial, sans-serif; }
+@mixin fontSmoothing { -webkit-font-smoothing: antialiased; font-smooth: never; }
+
+/* == COLOUR PALETTE == */
+
+$black: #272727;
+$lightGrey: #f2f2f2;
+$blue: #5d8398;
+$lightBlue: #bfd7e2;
+$yellow: #eeba45;
+$red: #e14d3d;
+
+$polo: 'only screen and (max-device-width: 380px)';
+$iPad: 'only screen and (min-device-width: 750px) and (max-device-width: 768px)';
+$touareg: 'only screen and (min-width: 550px) and (max-width: 768px)';
+$golf: 'only screen and (min-width: 768px)';
+$campervan: 'only screen and (min-width: 1201px)';
+
+/* == TEST == */
+
+$dist: 1.3rem;
+$baseline: 1.375rem;
+
+$layer1: 100;
+$layer2: 200;
+$layer3: 300;
+$layer4: 400;
+$layer5: 500;
+
+

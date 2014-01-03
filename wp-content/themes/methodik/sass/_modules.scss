@@ -1,0 +1,300 @@
+.lobster { font-family: lobster, arial, sans-serif; }
+.droidSans { font-family: droidSansRegular, arial, sans-serif; }
+.droidSansBold { font-family: droidSansBold, arial, sans-serif; }
+.openSans { font-family: openSansLight, arial, sans-serif; }
+.openSansBold { font-family: openSansExtraBold, arial, sans-serif; }
+
+.boxShadow { @include box-shadow(0 0 7px -2px rgba(0, 0, 0, 0.5)); }
+
+
+/* == BUTTONS ETC. == */
+.button-text { @include openSansLight; @include fontSmoothing; text-transform: uppercase; color: white; font-size: .875rem; cursor: pointer; }
+.button { @extend .button-text; outline: none; border: none; border-radius: 0; height: 3em; cursor: pointer; }
+// .button-fixed { @extend .button; @include opacity(.9); @include transition(all .3s ease); position: absolute; bottom: -2rem; left: 0; width: 100%; display: block; height: 2rem; line-height: 2rem; text-align: center;
+// 	&:hover { @include opacity(1); }
+// 	&:after { content: ''; @include opacity(0); @include transition(all .3s ease); background: url('../img/sprite.png') !important; background-position: -1850px -200px; width: 8px; height: 2rempx; display: inline-block; margin-left: .5rem; vertical-align: middle; margin-bottom: .15rem; margin-left: 30px; }
+// 	&:hover:after { @include opacity(1); margin-left: .5rem; }
+// }
+.button-arrowRight { @include opacity(.8); @include transition(all .3s ease); height: 2rem; width: 2rem; background: url('../img/sprite.png'), darken($red, 10%); background-position: -1667px -190px; position: absolute; right: 0; top: 0; cursor: pointer;
+	&:hover { @include opacity(1); }
+}
+.button-center { @extend .button; margin: $dist auto; display: block; }
+.arrowDown {
+	&:after { content: ''; background: url('../img/sprite.png'); background-position: -1850px 3px; width: 13px; height: 8px; display: inline-block; margin-left: .5rem; vertical-align: middle; margin-bottom: .2rem; }
+}
+.arrowRight { @extend .arrowDown;
+	&:after { background-position: 0 -121px; height: 18px; @include scale (.75); }
+}
+#button { display: none; }
+
+.about-us .arrowDown:after { background-position: -1850px -194px; }
+
+/* == ICONS == */
+
+.websiteDesign { @extend .sprite; background-position: -2000px -198px; width: 147px; height: 91px; display: block; margin: 0 auto; }
+
+/* == WHAT WE DO (tiles) == */
+section.pixelMosaic { @extend .sprite; background-repeat: repeat; background-position: 0 0; background-repeat: repeat; overflow: hidden;
+	@media #{$golf} { margin-top: $dist/2 !important; }
+	h2 { font-size: 1.25rem; line-height: 1.25rem; }
+}
+
+@media only screen and (min-width: 1633px) {
+	section.pixelMosaic { background: url('../img/large-pixel-mosaic.gif') 50% 50% repeat; }
+}
+
+
+/* == 5th ATTEMPT WHAT WE DO TILES == */
+
+
+.grid { padding-top: 0; text-align: justify; font-size: 0.1px; position: relative; margin: 1.3rem auto; max-width: 60rem;
+	&:after { content: ''; display: inline-block; width: 100%; }
+
+	li { display: inline-block; width: 23%; padding-top: 50%; margin-bottom: 2%; position: relative; overflow: hidden; @include box-shadow(0 0 7px -2px rgba(0, 0, 0, 0.5));
+  		@media #{$touareg} { width: 32%; padding-top: 33%; }
+  		@media #{$golf} { padding-top: 23%; }
+	}
+}
+
+.mob-fullWidth { width: 100%; }
+#col2Container { background: none !important; width: 100%; @include box-shadow (0 0 0 0 white);
+	@media #{$touareg} { width: 66%; }
+
+	.first { padding-top: 50%; width: 49%; display: inline-block; float: left; @include box-shadow(0 0 7px -2px rgba(0, 0, 0, 0.5));
+		@media #{$touareg} { width: 48.5%; }
+		@media #{$golf} { padding-top: 23%; }
+  }
+	.second {  padding-top: 50%; width: 49%; display: inline-block; float: right; position: relative; @include box-shadow(0 0 7px -2px rgba(0, 0, 0, 0.5));
+  		@media #{$touareg} { width: 48.5%; }
+  		@media #{$golf} { float: left; top: 1px; padding-top: 23%;}
+	}
+}
+
+li.noPadding { padding-top: 0 !important; }
+li.half { width: 49% !important;
+	@media #{$touareg} { width: 32% !important; }
+	@media #{$iPad} { width: 49% !important; }
+}
+li.mob-half { width: 49%;
+	@media #{$touareg} { width: 32%; }
+}
+
+// only for larger screens
+@media #{$golf} {  
+	li.third { width: 32.66%; }
+	li.sixth { width: 65.33%; }
+	#col2Container { background: none !important; float: left; top: 1px; width: 32.66%;
+	div.first { width: 100%; padding-top: 70.4%; margin-bottom: 4.75%; margin-top: -2px; overflow: hidden; position: relative !important; }
+	div.second { width: 100%; padding-top: 70.4%; overflow: hidden; position: relative; }
+  }
+}
+
+.grid .placeholder { padding: 0; } // to force justify to work
+ul.horizontal, ul.horizontal li { display: none; }
+
+/* == TILE CONTENTS == */
+i { @include iconFont; }
+
+// span.button-arrowRight { background: $red; position: absolute; top: 0; right: 0; height: 2rem; width: 2rem; @include opacity(.5); @include transition(all .3s ease);
+// 	&:hover { @include opacity(1); cursor: pointer; }
+// }
+// slide vars (same as JS vars)
+$poloDist: 250px;
+$golfDist: 400px;
+
+// test using @sass mixin and @if statements
+
+
+p.slide-bottom { line-height: .875rem; text-align: center; position: absolute; top: 2rem; left: 50%; margin-left: -4.5rem; z-index: 200; width: 9rem; font-size: .6rem; @include translateY($poloDist);
+	@media #{$polo} { font-size: .5rem; width: 7rem; margin-left: -3.5rem; line-height: .6rem; }
+	@media #{$golf} { width: 14rem; font-size: .75rem; margin-left: -7rem; @include translateY($golfDist); line-height: $baseline; }
+	@media #{$iPad} { line-height: 1rem; }
+}
+// unique placement for big tile
+#bigTile { position: relative; width: 100%;
+	@media #{$golf} { padding-top: 47.4% !important; float: right; width: 65.33%; top: 1px; }
+	@media #{$iPad} { padding-top: 46.9% !important; }
+	
+	i.slide-top { position: absolute; top: 1.75rem; left: 50%; margin-left: -2.5rem; height: 5.5rem; width: 5rem; color: black; font-size: 3rem; line-height: 2rem;
+		@media #{$polo} { top: .5rem; }
+		@media #{$golf} { top: 5rem !important; background-position: -2000px -300px; width: 9rem; margin-left: -4.5rem; }
+	}
+	h2.slide-top { @extend .white; top: 6rem; font-size: 1.875rem;
+		@media #{$polo} { top: 5rem; font-size: 2rem; }
+		@media #{$golf} { font-size: 2.5rem; top: 12rem; }
+	}
+	p.slide-bottom { @include fontSmoothing; top: 4rem; color: white;
+		@media #{$polo} { width: 10rem; font-size: .75rem; line-height: .75rem; margin-left: -5rem; top: 2.5rem; }
+		@media #{$touareg} { font-size: 1rem; width: 21rem; line-height: $baseline; margin-left: -10.5rem; }
+		@media #{$golf} { @include translateY(0); line-height: $baseline; top: 15rem !important; font-size: .875rem; width: 21rem; margin-left: -10.5rem; }
+	}
+	a.slide-bottom { @extend .white; @include droidSansBold; position: absolute; top: 8.5rem; left: 50%; margin-left: -2.2rem; width: 7.2rem; font-size: .75rem;
+		@media #{$polo} { top: 6.5rem; }
+		@media #{$golf} { top: 19rem; font-size: 1rem; margin-left: -3rem; }
+		&:after { @include transition(all .2s ease); content: ''; background: url('../img/sprite.png'); background-position: -1850px -197px; width: 8px; height: 13px; display: inline-block; margin-left: .5rem; vertical-align: middle; margin-left: .5rem; /*@include scale(.5); */ }
+		&:hover:after { margin-left: .75rem; }
+	}
+	span {
+		@media #{$golf} { display: none; }
+	}
+}
+
+h2.slide-top { font-size: 1rem; position: absolute; top: 55%; left: 0; width: 100%; text-align: center;
+	@media #{$polo} { font-size: .875rem !important; }
+}
+
+// photography tile
+#col2Container .first { background: url('../img/photography-tile-thumb.jpg') 50% -400% no-repeat, white; }
+
+
+
+// :before icons 
+.grid-icon { @include iconFont; display: block; font-size: 2.5rem; height: 2.5rem; }
+h2.video, h2.cms, h2.projectManagement, h2.photography, h2.plugins, h2.brandIdentity { @include openSansBold; top: 50%; height: 5rem; margin-top: -2.5rem; }
+h2.plugins p.slide-bottom { @include fontSmoothing; color: white !important; }
+h2.video { @include fontSmoothing; }
+h2.video:before { content: 'V'; @extend .grid-icon; }
+h2.cms:before { content: 'g'; @extend .grid-icon; }
+h2.projectManagement:before { content: 'o'; @extend .grid-icon; }
+h2.photography:before { content: 'I'; @extend .grid-icon; }
+h2.plugins:before { content: 'G'; @extend .grid-icon; }
+h2.brandIdentity:before { content: 'r'; @extend .grid-icon; }
+
+// fixed button
+.button-text { /*@include openSansLight; @include fontSmoothing;*/ text-transform: uppercase; color: white; font-size: .875rem; cursor: pointer; }
+.button { @extend .button-text; outline: none; border: none; border-radius: 0; height: 3em; cursor: pointer; }
+.button-fixed { @extend .button; @include opacity(.9); @include transition(all .3s ease); position: absolute; bottom: -2rem; left: 0; width: 100%; display: block; height: 2rem; line-height: 2rem; text-align: center;
+	&:hover { @include opacity(1); }
+	&:after { content: ''; /*@include scale(.5);*/ @include opacity(0); @include transition(all .3s ease); background: url('../img/sprite.png'); background-position: -1850px -197px; width: 8px; height: 13px; display: inline-block; margin-left: .5rem; vertical-align: middle; margin-bottom: .15rem; margin-left: 30px; }
+	&:hover:after { @include opacity(1); margin-left: .5rem; }
+}
+a { font-size: .75rem; }
+
+// weird hack
+.first { position: relative; }
+
+// hide CMS list for mobile
+ul.slide-bottom { display: none; }
+
+
+
+
+
+/* == PROJECT TILES == */
+.tileGrid-container { overflow: hidden; zoom: 1; text-align: justify; font-size: .1px; border: none !important;
+	&:after { content: ' '; display: inline-block; width: 100%; }
+
+	span { display: inline-block; position: relative; width: 23%; padding-top: 23%; margin-bottom: 2.5%; @include box-shadow(0 0 7px -2px rgba(0, 0, 0, 0.5));
+		i { position: absolute; top: 10%; left: 50%; margin: 0 0 0 -15%; padding: 0; width: 30%; height: 2rem; line-height: 2rem;
+			@media #{$touareg} { top: 20%; }
+			@media #{$golf} { top: 27.5%; }
+		}
+		img { width: 80%;
+			@media #{$polo} { position: absolute; top: 20%; }
+		}
+		h3 { position: absolute; top: 50%; width: 100%; left: 0; z-index: $layer3; text-align: center; font-size: .75rem;
+			@media #{$polo} { font-size: .6rem; }
+			@media #{$touareg} { top: 60%; }
+			@media #{$golf} { top: 65%; }
+		}
+	}
+}
+
+.tileGrid-container.about-jpsg {
+	span i {
+	@media #{$golf} { top: 16.7%; }
+	}
+	h3 {
+	@media #{$golf} { top: 60%; }
+	}
+}
+
+#cs1-container .tileGrid-container { padding-top: .25rem; padding-left: .1rem; padding-right: .1rem;
+	span { width: 31%; padding-top: 31%;
+		@media #{$touareg} { width: 22%; padding-top: 22%; }
+		@media #{$golf} { width: 12%; padding-top: 12%; }
+	}
+	span.placeholder.bgWhite {
+		@media #{$golf} { display: none; }
+	}
+}
+#cs2-container {
+	.tileGrid-container { width: 100%; padding-top: .25rem; }
+	span{ width: 18%; padding-top: 18%;
+		@media #{$touareg} { width: 18%; padding-top: 18%; }
+	}
+}
+
+// slight margin so tiles box-shadow don't get cut off
+.case-study .tileGrid-container span { margin-top: .2rem; margin-left: .2rem; margin-right: .2rem; }
+
+// invisible placeholder
+span.placeholder.bgWhite { @include box-shadow(0 0 0 0 black); }
+
+/* == QUOTE == */
+.smallQuote {
+	p { margin-bottom: 0; }
+	&:before { content: '\201C'; @include lobster; font-size: 8rem; height: $baseline*3; text-indent: -10px; vertical-align: middle; display: block; color: black; }
+	&:after { content: '\201D'; @include lobster; text-align: right; font-size: 8rem; height: $baseline*2; text-indent: -10px; vertical-align: middle; display: block; color: black; margin-bottom: $dist; }
+}
+
+
+
+/* == SVG INFOGRAPHICS == */
+section.infographic-container { width: 100%; height: auto; overflow: hidden; display: block; zoom: 1; margin: 0 auto; position: relative; background: #f2f2f2;
+	@media #{$golf} { max-width: 60rem; text-align: justify; font-size: 0.1px; }
+}
+// no svg fallback
+.no-svg section.infographic-container { height: 550px; width: 960px; background: url('../img/no-svg-infographics.gif') -7px 0 no-repeat; }
+
+.infographic-text { text-align: center; width: 150px; margin: 0 auto; }
+
+.infographic-box { width: 12.5rem; height: 12.5rem; margin: 0 auto; display: block; clear: both; position: relative; margin: $dist*2 auto;
+	@media #{$golf} { display: inline-block; margin: 4%; }
+}
+.no-svg .infographic-box { display: none !important; }
+.no-svg section.infographic-container {  }
+.infographic-box.fourth { }
+.infographic-box.placeholder { height: 0; padding: 0; margin: 0 4% 0 4%; }
+.infographic-box.last {
+	&:after{ display: inline-block; width: 100%; content: ''; }
+}
+.infographic { width: 12.5rem; height: 12.5rem; overflow: hidden; margin: 0 auto;  }
+
+#infographic1 {  }
+#infographic1-dashed { width: 12.5rem; height: 12.5rem; position: absolute; top: 0; left: 0; }
+
+#infographic2 {  }
+
+#infographic3 {  }
+#infographicClockhand1 { width: 20px; height: 100px; position: absolute; top: 50%; margin-top: -60px; left: 50%; margin-left: -17px; background: url('../img/largehand.png') 5px 0 no-repeat; }
+#infographicClockhand2 { width: 10px; height: 70px; position: absolute; top: 50%; margin-top: -35px; left: 50%; margin-left: -10px; background: url('../img/smallhand.png') 0 -10px no-repeat; }
+
+#infographic4 { background: url('../img/ipad.svg'); height: 200px; width: 200px; position: relative;
+	p { width: 100%; margin: 0; top: 198px; left: -3px; position: absolute; }
+}
+
+#infographic5 { position: relative; }
+
+
+
+
+/* == CASE STUDY == */
+
+section.case-study { padding-top: $dist;
+	div.projectDescription { 
+		@media #{$golf} { width: 66%; float: left; display: inline-block; }
+	}
+	div.tileGrid-container {
+		@media #{$golf} { width: 32%; float: right; display: inline-block; margin-top: $dist*1; padding-bottom: $dist;
+		}
+		span {
+			@media #{$golf} { width: 45%; padding-top: 45%; margin-top: 6%; }
+		}
+	}
+}
+.textWrap { overflow: hidden; zoom: 1; }
+
+.videoContainer { padding-bottom: $dist*2; }
+
+

@@ -1,0 +1,240 @@
+/* IE8 CSS */
+
+/* ==
+   ==
+   == BASE STYLES
+   ==
+   ==
+   == */
+
+body { font-size: 16px; }
+p { line-height: 22px; font-size: 16px; }
+p.huge { font-size: 32px; margin-bottom: 22px; line-height: 44px; }
+p.big { font-size: 20px; margin-bottom: 22px; line-height: 32px; }
+h2 { line-height: 22px; font-size: 22px; margin-bottom: 11px; }
+h4.indexTitle { padding: 22px; }
+
+/* ==
+   ==
+   == MAIN NAV
+   ==
+   ==
+   == */
+
+.modalNav { display: none; }
+.logoContainer { margin: 0 auto; width: 120px; height: 150px; padding-top: 100px; background-image: url('../img/methodik-logo-icon.jpg'); background-position: 50% 20px; background-repeat: no-repeat; }
+h1.logo { text-align: center; padding-right: 18px; }
+.logoIcon { display: none; }
+h1.lobster.tagline { font-size: 76px; }
+
+/* ==
+   ==
+   == LAYOUT
+   ==
+   ==
+   == */
+
+.container { margin: 0 21px 21px 21px !important; background: #f2f2f2; }
+section.pixelMosaic { margin-top: 10px !important; background: url("../img/large-pixel-mosaic.gif") 50% 50% repeat; display: block; height: 1055px; }
+.inner { width: 960px; padding: 22px; }
+
+/* what we do grid */
+ul.grid li h2 { font-size: 22px !important; }
+div.tileGrid-container span i, div.tileGrid-container span h3 { font-size: 16px; }
+div.tileGrid-container span i { font-size: 36px; }
+
+
+/* desktop nav */
+.navContainer { position: relative; bottom: 0; height: 22px; margin-top: 22px; text-align: justify;font-size: 0.1px; max-width: 960px; margin: 0 auto; margin-top: 22px; }
+.mainNavigation { position: relative; background: transparent; height: 22px; width: 960px !important; margin: 0 auto; }
+.mainNavigation span { display: none; }
+.navContainer li { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65); display: inline-block; border: none; width: 15%; height: 22px; line-height: 22px; }
+.navContainer li:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+.navContainer li.placeholder { display: inline-block; }
+.navContainer li a { font-size: 12px !important; }
+
+/* what we do grid */
+
+ul.grid { text-align: center; font-size: 16px; width: 960px; position: relative; margin-top: 22px; }
+.grid li { height: 211px; margin-bottom: 11px; }
+.grid li.sixth { width: 629px; height: 211px; padding-top: 0; float: left; }
+.grid li.sixth.mob-half { margin-top: 22px; }
+
+#bigTile { height: 433px; float: right; width: 629px; top: 0px; float: right; padding-top: 0; }
+#bigTile i.slide-top { top: 80px !important; background-position: -2000px -300px; width: 144px; margin-left: -72px; }
+#bigTile h2.slide-top { font-size: 40px; top: 192px; font-size: 40px !important; }
+#bigTile p.slide-bottom { line-height: 22px; top: 240px !important;font-size: 14px; width: 336px; margin-left: -168px; }
+#bigTile a.slide-bottom { top: 304px; font-size: 16px; margin-left: -58px; }
+#bigTile a.slide-bottom:after { margin-left: 8px; }
+#bitTile span.button-arrowRight { display: none; }
+
+#col2Container { width: 309px; height: auto; margin-bottom: 0; float: left; }
+#col2Container .first { width: 100%; height: 211px; float: left; overflow: hidden; }
+#col2Container .second { width: 100%; top: 1px; height: 211px; display: block; margin-top: 11px; float: left; }
+
+li.half { width: 469px; display: inline-block; margin-bottom: 0; height: 211px; margin-top: 11px; padding-top: 0; }
+/* float second row left and right */
+li.half.bgWhite { float: left; }
+li.half.bgYellow { float: right; }
+
+/* float brand identity right */
+li.third.mob-half { display: inline-block; float: right; margin-top: 22px; width: 309px; height: 211px; padding-top: 0; }
+p.slide-bottom { width: 224px; font-size: 12px; margin-left: -112px; line-height: 22px; top: 32px; top: 400px; }
+
+/* pop up links */
+ul.grid li a { bottom: -32px; height: 32px; line-height: 32px; }
+
+/* icons */
+h2.slide-top { height: 56px; top: 30%; }
+h2.slide-top:before { font-size: 40px; height: 40px; margin: 0 auto; text-align: center; }
+
+
+/* project description (index) */
+section.quote { display: block; position: relative; padding-bottom: 22px; }
+blockquote.bigQuote h5 { font-size: 91px; margin-top: 22px; }
+.projectDescription-container { font-size: 14px; margin-top: 44px; overflow: hidden; zoom: 1; }
+.projectDescription-container .projectDescription { overflow: hidden; display: inline-block; float: left; padding-right: 10px; font-size: 12px; width: 48%; float: left; padding-right: 22px; }
+.projectDescription p { font-size: 12px; }
+
+div.projectDescription-container blockquote.smallQuote { width: 50%; display: inline-block; width: 50%; float: right; padding-left: 10px; padding-top: 44px; }
+blockquote.smallQuote p { font-size: 12px !important; }
+blockquote.smallQuote:before, blockquote.smallQuote:after { font-size: 100px !important; }
+blockquote.smallQuote:before { margin-bottom: 0; line-height: 0; margin-top: 44px;}
+
+
+/* about us */
+
+
+.staffMember-container { margin-top: 66px; margin-bottom: 22px; }
+.staffMember { display: inline-block; width: 30%; position: relative; }
+.staffMember img { width: 100%; }
+.staffMember footer { width: auto; float: left; padding: 0; margin-top: 10px; }
+.staffMember a { display: block; position: absolute; top: 0; right: 0; height: 32px; width: 32px; background: red; }
+
+/* the process section */
+
+.theProcess { height: 400px !important; width: 100%; display: block; background: url('../img/the-process-background.jpg') 50% 0; position: relative; }
+.theProcess div { padding-top: 42px; width: 336px; }
+.theProcess div .title { padding: 0 8px 0; font-size: 32px; }
+.theProcess div .tagline { padding: 0 8px; }
+.theProcess a { height: 32px; line-height: 32px; width: 138px; margin-top: 10px; background: #e14d3d; margin: 16px auto; text-align: center; }
+
+
+/* footer */
+.footerSection h2 { max-width: 240px; font-size: 22px; }
+.boringFooter { padding-top: 16px; padding-bottom: 4px; }
+
+div.map-container { width: 48%; height: 578px; float: left; display: inline-block; position: relative; margin-bottom: 22px; }
+.map { width: 100%; display: inline-block; float: left; margin-bottom: 21px; }
+.map-maskLayer { width: 100%; height: 578px; background: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65); }
+.map-maskLayer p.mapAddress { font-size: 28px; line-height: 44px; left: 22px; bottom: 22px; }
+.map-maskLayer p.mapAddress span { font-size: 16px; }
+.map-container span.bgRed { background: #e14d3d; position: absolute; top: 22px; left: 22px; width: 96px; height: 32px; line-height: 32px; }
+
+/* form */
+.contactForm { width: 48%; display: inline-block; float: right; margin-top: 0; }
+.contactForm label { height: 22px; margin-bottom: 5px; display: block; }
+.contactForm textarea { height: 192px !important; }
+.contactForm input, .contactForm textarea { margin-bottom: 22px; display: block; height: 32px; line-height: 32px; padding-left: 8px; }
+.contactForm textarea { margin-top: 10px; }
+.contactForm input.button { height: 64px; }
+
+
+/* case study */
+#cs1-container .tileGrid-container span { width: 12%; padding-top: 12%; }
+#cs1-container .tileGrid-container span.placeholder.bgWhite { display: none; }
+
+/* case study pages */
+.case-study .tileGrid-container span i { top: 20%; }
+.case-study .tileGrid-container span h3{ font-size: 12px !important; top: 60%;}
+
+/* small tiles */
+.tileGrid-container { display: block !important; width: 100%; margin-top: 22px; }
+.tileGrid-container span:before { content: ''; background: black; height: 300px; width: 300px; position: relative; }
+.tileGrid-container span i { top: 27.5%; }
+.tileGrid-container span h3 { top: 65%; }
+.tileGrid-container span.bgWhite { background: #ccc; }
+
+/* gallery handles */
+a.slidesjs-previous { background: url('../img/ie8-gallery-handles.gif'); height: 134px; width: 32px; margin-top: -43px; }
+a.slidesjs-next { background: url('../img/ie8-gallery-handles.gif') -100px 0; height: 134px; width: 32px; margin-top: -43px; }
+
+/* secondary navigation */
+nav.secondaryNav { text-align: center; font-size: 16px; width: 100%; display: block; width: 960px; margin: 0 auto 44px; }
+nav.secondaryNav button { width: 300px }
+
+
+/* ==
+   ==
+   == SUB PAGE
+   ==
+   ==
+   == */
+
+/* the process */
+html.lt-ie9 section.how-we-do-it { margin-top: 10px !important; overflow: hidden; display: block;  }
+html.lt-ie9 section .inner { padding-bottom: 22px; }
+.articleImg-halfwidth { width: 50%; display: inline-block; float: left; }
+.centerCol { width: 60%; }
+.graphic-and-quote blockquote { display: inline-block; width: 50%; float: right; padding-bottom: 0; margin-bottom: 0; }
+.graphic-and-quote p { display: inline-block; width: 50%; }
+.graphic-spread { padding: 62px 0 62px 0; }
+.about-jpsg.tileGrid-container span { width: 30% !important; padding-top: 30% !important; }
+
+
+/* general entry styles */
+.entry { max-width: 960px; margin: 0 auto; }
+.entry h1 { line-height: 36px; margin-bottom: 22px; font-size: 32px; }
+.entry p { font-size: 16px; line-height: 27px; margin: 22px auto; }
+.entry blockquote { font-family: droidSansRegular, arial, sans-serif; font-size: 16px; line-height: 32px; margin-bottom: 22px; margin-left: 0; padding-left: 21px; border-left: 21px #5d8398 solid; }
+.entry ul li { font-size: 16px; color: #3a3a3a; }
+
+.entry .centerCol { display: block; width: 60%; margin: 22px auto; }
+
+.entry .graphic-and-quote { margin-top: 62px; margin-bottom: 62px; }
+.entry .graphic-and-quote blockquote { border-left: none; font-size: 22px; line-height: 44px; padding: 22px 22px 0 22px;  }
+.entry .graphic-and-quote p { padding: 0 22px 0 22px; color: #272727; }
+
+/* bio pages */
+.about-us { padding-bottom: 22px; margin-top: 10px !important; }
+.about-us h1 { width: 100%; font-size: 66px; margin-bottom: 32px; margin-top: 0; }
+.about-us h1.lobster span { font-size: 10px; margin-left: 22px; }
+.about-us p.huge, .about-us p.big { width: 80%; }
+img.about-us-mainImg { width: 66%; float: right; margin-top: 22px; }
+
+
+section.bio { width: 66%; float: right; padding: 41px; margin-top: 22px; }
+section.bio p { font-size: 14px; line-height: 28px; color: #3a3a3a; }
+
+.stats { width: 31%; }
+.stats span { width: 45%; padding-top: 45%; margin-bottom: 21px; }
+
+aside.about-us-photography-container { margin: 21px 0 21px 0; width: 31%; }
+aside.about-us-photography-container .photography { margin-top: 22px; }
+aside.about-us-design-container { text-align: justify; font-size: 0.1px; margin-top: 62px; margin-bottom: 22px; }
+aside.about-us-design-container:after { content: ''; display: inline-block; width: 100%;}
+aside.about-us-design-container .design { width: 32%; display: inline-block; }
+aside.about-us-design-container .design h2 { top: 10px; left: 10px; padding: 8px; }
+
+/* case studies */
+
+section.case-study .inner .projectDescription { width: 66%; float: left; }
+section.case-study .inner .tileGrid-container { width: 32%; float: right; }
+section.case-study .inner .tileGrid-container span { width: 45%; padding-top: 45%; margin-top: 6%; }
+section.case-study .inner .gallerySlider { margin-top: 22px; }
+section.case-study .inner .quoteButtonContainer { margin-top: 22px; }
+
+/* other */
+div.mobCheck { position: fixed; }
+.modalNav { display: none; }
+
+/* button fixes */
+button.bgBlue.button { font-size: 14px !important; width: 24%; }
+button.bgBlue.button.last { display: none; }
+#caseStudy-button { margin: 22px auto 22px 403px; display: block; }
+.arrowDown:after, .arrowRight:after { margin-left: 8px; }
+span.button-arrowRight, a.button-arrowRight { background: #cc301f; width: 32px; height: 32px; z-index: 200; }
+span.button-arrowRight:after, a.button-arrowRight:after { content: ''; background: url('../img/sprite.png') -1667px -190px; position: absolute; top: 0; right: 0; z-index: 300; height: 32px; width: 32px; }
+span.back { top: 22px; left: 22px; width: 76px; position: absolute; line-height: 32px; height: 32px; text-align: center; }
+span.back:before { content: ''; display: inline; background: url('../img/sprite.png') -1680px -96px; padding-left: 15px; height: 32px; width: 12px; }
+
